@@ -88,7 +88,7 @@ We are going to use PowerShell for the exercises.
 Many PowerShell commands that we use are actually aliases for common commands in other shells.
 alias is a nickname for a command.
 
-##ls C:\
+## ls C:\
 
 The first command that we'll use is for listing files and directories.
 Let's start by listing the directories in the root of our C: drive.
@@ -120,15 +120,15 @@ Windows:
 Windows, this is where the Windows operatong system is installed.
 
 
-##Get-Help ls
+## Get-Help ls
 we'll see the text describing the parameters of the ls command.
 This will give us a brief summary of the commands parameter.
 
-##Get-Help ls-Full
+## Get-Help ls-Full
 we can see more detailed help
 you can see a descriptuin of each of the parameters and some examples of how to use the command.
 
-##-Force
+## -Force
 we can see all teh hidden files in the directory
 The -Force paremeter will show hidden and system files that aren't normally listed with just ls.
 Now you can see more important files and directories such as Recycle Bin.
