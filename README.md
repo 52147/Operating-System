@@ -22,7 +22,7 @@ File and Text Manipulation
 3. Copying and pasting
 4. Changing commands
 
-Path
+## Path
 
 C:\Users\Cindy\Desktop
 In Windows, filesystems are assigned to drive letters, which look like C:, or D:, or X:.
@@ -81,7 +81,7 @@ A couple of command line interfaces(CLI) available in Windows.
 1. The first is called the Command Prompt, command.exe.
 2. The second is PowerShell or powershell.exe.
 
-Command prompt
+## Command prompt
 It's similar to the command prompt that was used in MS DOS,
 since powershell supports most of the same commands as Command Prompt, and more.
 We are going to use PowerShell for the exercises.
