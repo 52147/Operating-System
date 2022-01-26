@@ -1,4 +1,4 @@
-# Operating-System
+# Operating-System: command line
 
 Window's operating system
 using GUI (Graphical user interface)
