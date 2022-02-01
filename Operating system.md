@@ -32,7 +32,7 @@ OS video:
 
 ## Chapter 1 
 ### Introduction
-- A operating system is software that manages a computer's hardware/
+- A operating system is software that manages a computer's hardware.
 - It also provides a basis for application programs and acts as an intermediary between the computer user and the computer hardware.
 - It is important first to understand the organization and architecture of computer hardware.
 - This inculuds 
@@ -166,3 +166,11 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
   
 - But how does the controller inform the device driver that it has finished its operation? 
 - This is accomplished via an interrupt.
+
+
+## Chapter 2 Operating system structure
+
+- We can view an operating system from several vantage points.
+- 1. One view focuses on the services that the system provides;
+- 2. on the interface that it makes available to uses and programmers.
+- 3. on its components and their interconnections.
