@@ -174,3 +174,34 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - 1. One view focuses on the services that the system provides;
 - 2. on the interface that it makes available to uses and programmers.
 - 3. on its components and their interconnections.
+
+
+### 2.1 Operating system services
+- 1. User interface:
+     - Almost all operating systems have a user interface(UI).
+     - This interface can take several forms.
+     - 1. GUI (graphical user interface)
+          - Most commonly, a **graphical user interface (GUI)** is used.
+          - the interface is a window system with a mouse that serves as a pointing device to direct I/O,
+          - choose from menues, and make selections and a keyboard to enter text.
+     - 2. touch-screen interface
+          - Mobile systems such as phones and tablets provide a touch-screen interface,
+          - enabling users to slide their fingers across teh screen or press buttons on the screen to select choices.
+     - 3. CLI (command-line interface)
+          - which uses text comaands and a method for entering them
+          - (a keyboard for typing in commands in a specific format with specific options).     
+- 2. Program execution:
+- 3. I/O operations
+- 4. File-system manipulation :
+     - programs need to read and wrire files and directories.
+     - They also need to create and delete them by name, search for give file, and list file information.
+     - some operating systems include permissins management to allow or deny access to files or directories base on file ownership.
+     - Many operating systems provides a variety of file systems,
+     - sometimes to allow personal choice and sometimes to provide specific features or performance characteristics. 
+- 5. communication
+- 6. Error detection:
+- 7. Resource allocation
+- 8. Logginh
+- 9. Protection and security
+- 
+
