@@ -198,7 +198,14 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
      - some operating systems include permissins management to allow or deny access to files or directories base on file ownership.
      - Many operating systems provides a variety of file systems,
      - sometimes to allow personal choice and sometimes to provide specific features or performance characteristics. 
-- 5. communication
+- 5. Communications:
+     - There are many circumstances in which one process needs to exchange information with another process.
+     - Such communication may occur between processes that are executing on the same computer or between process that are executing on different computer systems tied together by a network.
+     - 1. shared memory:
+       - Communications may be implemented via shared memory,
+       - in which 2 or more processes read and write to a shared section of memory,
+     - 2. message passing:
+       - in which packets of information in predefined formats are moved between processes by the operating system. 
 - 6. Error detection:
 - 7. Resource allocation
 - 8. Logginh
