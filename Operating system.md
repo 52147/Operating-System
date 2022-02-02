@@ -268,4 +268,6 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - 6. protection
 - These types of system calls normally provided by an operating system.
 
+## 2.3.3.1 Process Control
+
 ### Stacks            
