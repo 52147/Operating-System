@@ -284,6 +284,9 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
   - the Windows function CreateProcess()
   - (which, unsurprisingly, is used to create a new process)
   - actually invokes the NTCreateProcess() system call in the Window kernel.
+
+#### use API to invoke system call
+- Why would an application programmer prefer programming according to an API rather than invoking actual system calls?
     
 ### 2.3.3 Types of System calls
 - System calls can be grouped roughly into six major categories:
