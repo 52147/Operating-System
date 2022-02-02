@@ -221,7 +221,7 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - Before we discuss how an operating system makes system calls available,
 - let's first use an example to illustrate how system calls are used:
   - writing a simple program to read data from one file and copy them to another file.
-  - 1. first step:
+  
   - The first input that the program need is the names of the 2 files:
      - the input file and the output file.
      - These names can be specified in many ways, depending ob the operating-system design.
