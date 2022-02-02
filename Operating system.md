@@ -210,5 +210,34 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - 7. Resource allocation
 - 8. Logginh
 - 9. Protection and security
-- 
+
+### 2.3 System calls
+- Systems calls provide an interface to the services made available by an operating system.
+- These calls are generally available as functions written in C and C++, although certain low-level tasks
+- (for example, tasks where hardware must be accessed directly)
+- may have to be written using assembly-language instructions.
+
+#### how system calls are used:
+- Before we discuss how an operating system makes system calls available,
+- let's first use an example to illustrate how system calls are used:
+  - writing a simple program to read data from one file and copy them to another file.
+  - The first input that the program need is the names of the 2 files:
+     - the input file and the output file.
+     - These names can be specified in many ways, depending ob the operating-system design.
+     - 1. command
+       - One approach is to pass the names of the two files as part of teh command
+       - --for example, the UNIX cp command:
+         - cp in.txt out.txt
+         - This command copies the input file in.txt to the output file out.txt.
+     - 2. system calls
+         - A second approach is for the program to ask the user for the names.
+         - In an interactive system, this approach will require a sequence of system calls,
+         - first to write a prompting message on the screen and then to read form the keyboard the characters that define the two files.
+         - On mouse-based and icon-baseed systems,
+         - a menu of file names is usually displayed in a window.
+         - The user can then use the mouse to select the source name, 
+         - and a window can be opended for the destination name to be specified.
+         - This sequence requires mant I/O system calls.
+    
+    - 
 
