@@ -221,6 +221,7 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - Before we discuss how an operating system makes system calls available,
 - let's first use an example to illustrate how system calls are used:
   - writing a simple program to read data from one file and copy them to another file.
+  - 1. first step:
   - The first input that the program need is the names of the 2 files:
      - the input file and the output file.
      - These names can be specified in many ways, depending ob the operating-system design.
@@ -239,5 +240,24 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
          - and a window can be opended for the destination name to be specified.
          - This sequence requires mant I/O system calls.
     
-    - 
+  - Once the two file names have been obtained, the program must open the input file and create and open the output file.
+  - Each of these operations requires another system call.
+  - Possible error conditions for each system call must be handled.
+    - For example, when the program tries to open the input file, it may find that there is no file of that name or that the file is protected against access.
+    - In these case, the program should output an error message 
+    - (another sequence of system calls)
+    - and then terminate abnormally(another system call).
+    - If the input file exists, then we must create a new output file.
+    - We may find that there is already an output file with the same name,
+    - This situation may cause the program to abort(a system call),
+    - or we may delete the existing file(a system call)
+    - and create a new one(yet another system call).
+    - Another option, in an interactives system, is to ask the user(via a sequence of system calls to output the prompting message and to read the response from the terminal)
+    - whether to replace the existing file or to abort the program.
+    - When both files are set up, we enter a loop that reads from the input file(a system call)
+    - and writes to the output file(another system call).
+    - Each read and write must return status information regarding various possible error coditions.
+    -   
 
+
+### Stacks            
