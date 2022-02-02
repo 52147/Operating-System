@@ -258,6 +258,14 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
     - and writes to the output file(another system call).
     - Each read and write must return status information regarding various possible error coditions.
     -   
-
+### 2.3.3 Types of System calls
+- System calls can be grouped roughly into six major categories:
+- 1. process control
+- 2. file management
+- 3. device management
+- 4. information maintenance
+- 5. communications
+- 6. protection
+- These types of system calls normally provided by an operating system.
 
 ### Stacks            
