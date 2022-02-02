@@ -262,6 +262,28 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
     - Finally, after the entire file is copied, the program may close both files(2 system calls),
     - write a message to the console or window(more system calls),
     - and finally terminate normally(the final system call).
+
+### 2.3.2 API (Application programming interface)
+- As you can see, even simple programs may make heavy use of the operating system.
+- Frequently, systems execute thousands of system calls per second.
+
+- Application developers design programms according to an application programming interface(API).
+- The API specifies a set of functions that are available to an application programmer,
+- including the parameters that are passed to each function and the return values the programmer can expect.
+- Three of the most common APIs available to application programmers are 
+- 1. the Windoes API for Windows systems, 
+- 2. the POSIX API for POSIX-based systems(which include virtually all versions of UNIX, LINUX,and macOS)
+- 3. JAVA API for programmers that run on the java virtual machine
+
+- A programmer accesses an API via library of code provided by the operating sysytem.
+- In the case of UNIX and Linux for programs written in the C language, the library is called libc.
+- Note that-- each operating system has its own name for each system call.
+
+- The functions that make up an API typically invoke the actual system calls on behalf of the application programmer.
+  - for example,
+  - the Windows function CreateProcess()
+  - (which, unsurprisingly, is used to create a new process)
+  - actually invokes the NTCreateProcess() system call in the Window kernel.
     
 ### 2.3.3 Types of System calls
 - System calls can be grouped roughly into six major categories:
