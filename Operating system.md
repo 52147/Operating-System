@@ -257,7 +257,12 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
     - When both files are set up, we enter a loop that reads from the input file(a system call)
     - and writes to the output file(another system call).
     - Each read and write must return status information regarding various possible error coditions.
-    -   
+    - On input, the program may find that the end of the file has been reached or that there was a hardware failure in the read(such as a parity error).
+    - The write operation may encounter various errors, depending on the output device (for example, no more available disk space).
+    - Finally, after the entire file is copied, the program may close both files(2 system calls),
+    - write a message to the console or window(more system calls),
+    - and finally terminate normally(the final system call).
+    
 ### 2.3.3 Types of System calls
 - System calls can be grouped roughly into six major categories:
 - 1. process control
