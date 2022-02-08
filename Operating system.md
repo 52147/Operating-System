@@ -300,4 +300,46 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 
 ## 2.3.3.1 Process Control
 
-### Stacks            
+### Stacks
+
+
+
+## Part two Process Management
+- A process is a program in executin.
+- A process will need certain resources -- such as CPU time, memory, files, and I/O devices -- to accomplish its task.
+- These rsources are typically allocated to the process while it is executing.
+- A process is the unit of work in most systems.
+- operating- system processes execute system code,
+- and user processes execute user code.
+
+- Modern OS support processes having multiple threads of control.
+- On systems with multiple hardware processing cores, these threads can run in pareallel.
+
+- One of the most aspects of an OS is how it schedules threads onto available processing cores.
+- Several choices for designing CPU schedulers are available to programmers. 
+
+** Chapter 3 Processes
+- A system consists of a collection of processes,
+- some executing user code, others executing opreating system code.
+- All these processed can execute concurrently, with the CPU multiplexed among them.
+
+### 3.1 Process concept
+
+### 3.1.1 The process
+- Informally, a process is a program in execution.
+- The status of the current activity of process is represented by the value of the program counter
+- and the contents of the processor's registers
+- The memory layout of a process is divided into multiple sections.
+- These sections include:
+#### The memory layout of a process
+- Text section: the executable code
+ 
+- Data section: global variables
+
+- Heap section: memory that is dynamically allocated during program run time
+
+- Stack section: 
+  - temporary data storage when invoking functions
+  - (such as function parameters, return addressed, and local variable)
+
+- 
