@@ -342,4 +342,26 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
   - temporary data storage when invoking functions
   - (such as function parameters, return addressed, and local variable)
 
+- the sizes of the text and data sections are fixed, as their sizes do not change during program run time.
+- However, the stack and heap sections can shrink and grow dynamically during program exection.
+**** activation record: containg function parameter, local variables, return address is pushed onto the stack.
+- Each time a function is called, and activation record containing function paremeters, local variables, and the return address is pushed onto the stack;
+- when control is returned from the function, the activation record is popped from the stack.
+
+- Similarly, the heap will grow as memory is dynamically allocated,
+- and will shrink when memory is returned to the system.
+- Although the stack and heap sections grow toward one another, 
+- the OS must ensure they do not overlap one another. 
+**** program itself is not a process(process -> passive entity; process -> active entity)
+- Program by itself is not a process/
+- A program is a passive entity, such ad a file containing a list of instructions stored on disk (often called an executabl fill).
+- In contrast, a process is an active entity, with a program counter specifying the next instruction to execute and a set of associated resources.
+- A programm becomes a process when an executable file is loaded into memory.
+- 2 common techniques for loading executable files are double-clicking an icon representing the executable file
+- and entering the name of the executable file on the command line(as in prog.exe or a.out). 
+
+
+#### 2 processes be associated with the sam program, they are considered 2 seperate execution sequences.
+- For instance, several users may be running different copies of the mail program,
+- or the same user may
 - 
