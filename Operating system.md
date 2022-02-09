@@ -363,5 +363,16 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 
 #### 2 processes be associated with the sam program, they are considered 2 seperate execution sequences.
 - For instance, several users may be running different copies of the mail program,
-- or the same user may
-- 
+- or the same user may invokes many copies of the web browser program.
+- Each of these is a sperate process; 
+- and although the text sections are equivalent, the data, heap, and stack sections vary.
+- It is also common to have a process that spawns many processes as it runs.
+
+- Note that a process can itself be an execution environment for other code.
+- The Java programming environment provides a good example.
+- In most circumstances, and executable Java program is executed within the Java virtual machine(JVM).
+- The JVM executes as a process that interprets the loaded Java code and takes actions(via native machine insturctions) on behalf of that code.
+- For example, to run the compiled Java program Program.class, we would enter
+  - Java Program
+  - The command java runs the JVM as an ordinary process, which in turns executes the Java program Program in the virtual machine.
+  - The concept is the same as simulation, 
