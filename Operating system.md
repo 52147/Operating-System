@@ -147,10 +147,11 @@ OS video:
 - A device controller maintains some local buffer storage and a set of special-purpose registers. 
 - The device controller is responsible for moving the data between the peripheral devices that it controls and its local buffer storage.
 - Typically, operating systems have a device driver for each device controller. This device driver understands the device controller and provides the rest of the operating system with a uniform interface to the device. 
-- The CPU and the device controllers can execute in parallel, competing for memory cycles. To
-ensure orderly access to the shared memory, a memory controller synchronizes access to the memory.
-- In the following subsections, we describe some basics of how such a system operates, focusing on three key aspects of the system. We start with interrupts,
--  which alert the CPU to events that require attention. We then discuss storage structure and I/O structure.
+- The CPU and the device controllers can execute in parallel, competing for memory cycles. 
+- To ensure orderly access to the shared memory, a memory controller synchronizes access to the memory.
+- In the following subsections, we describe some basics of how such a system operates, focusing on three key aspects of the system. 
+- We start with interrupts,
+- which alert the CPU to events that require attention. We then discuss storage structure and I/O structure.
 
 #### 1.2.1 Interrupts: device controller : operation finished -> device driver 
 - Consider a typical computer operation: a program performing I/O. 
@@ -318,7 +319,7 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - One of the most aspects of an OS is how it schedules threads onto available processing cores.
 - Several choices for designing CPU schedulers are available to programmers. 
 
-** Chapter 3 Processes
+**Chapter 3 Processes
 - A system consists of a collection of processes,
 - some executing user code, others executing opreating system code.
 - All these processed can execute concurrently, with the CPU multiplexed among them.
@@ -353,7 +354,7 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - Although the stack and heap sections grow toward one another, 
 - the OS must ensure they do not overlap one another. 
 **** program itself is not a process(process -> passive entity; process -> active entity)
-- Program by itself is not a process/
+- Program by itself is not a process
 - A program is a passive entity, such ad a file containing a list of instructions stored on disk (often called an executabl fill).
 - In contrast, a process is an active entity, with a program counter specifying the next instruction to execute and a set of associated resources.
 - A programm becomes a process when an executable file is loaded into memory.
@@ -361,7 +362,7 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - and entering the name of the executable file on the command line(as in prog.exe or a.out). 
 
 
-#### 2 processes be associated with the sam program, they are considered 2 seperate execution sequences.
+#### 2 processes be associated with the same program, they are considered 2 seperate execution sequences.
 - For instance, several users may be running different copies of the mail program,
 - or the same user may invokes many copies of the web browser program.
 - Each of these is a sperate process; 
@@ -395,11 +396,11 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - An a process executes, it changes state.
 - The state of a process is defined in part by the current activity of that process.
 - A process may be in one of the following states:
-  - New: The process is being created.
-  - Running: Instructions are being executed.
-  - Waiting: The process is waiting for some event to occur(such as an I/O completion or reception of a signal)
-  - Ready: The process is waiting to be assigned to a processor.
-  - Terminated: The process has finished execution. 
+  - 1. New: The process is being created.
+  - 2. Running: Instructions are being executed.
+  - 3. Waiting: The process is waiting for some event to occur(such as an I/O completion or reception of a signal)
+  - 4. Ready: The process is waiting to be assigned to a processor.
+  - 5. Terminated: The process has finished execution. 
 
 - only one process can be running on any processor core at any instant.
 - Many processes may be ready and waiting.
@@ -410,3 +411,21 @@ ensure orderly access to the shared memory, a memory controller synchronizes acc
 - A PCB contains many pieces of information associated with a specific process, including these:
 - 1. Process state
 - 2. Program counter
+
+
+## Cpapter 4 Threads & Concurrency
+- a process was an executing program with a single threas of control.
+- a process contain multiple threads of control
+- Identifying opportunities for parallelism through the use of threads
+- is becoming increasingly important for modern multicore systems that provide multiple CPUs.
+- In this chapter, we introduce many concepts associated with multithreaded computer systems,
+- including APIs for the Pthreads, Windows, and Java thread libries.
+- And features that abstract the concept of creating threads,
+- allowing developers to focus on identifying opportunities for paralleslism
+- and letting language features and API frameworks manage the details of thread creation and management.
+
+### 4.1 Overview
+- A thread is a basic unit of CPU utilzation; it comprises a thread ID, a program conter(PC), a re
+
+
+
