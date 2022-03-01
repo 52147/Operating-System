@@ -137,7 +137,7 @@ OS video:
 
 ### 1.2 Computer-System Organization
 
-#### Device controller
+#### Device controller (in charge of a specific type of device)
 - A modern gernal-purpose computer system consists of one or more CPUs and a number of device controllers connected through a common bus that provides access between components and shared memory. 
 - Each device controller is in charge of a specific type of device 
 - (for example, a disk drive,audio device, or graphics display). 
@@ -146,8 +146,9 @@ OS video:
 
 - A device controller maintains some local buffer storage and a set of special-purpose registers. 
 - The device controller is responsible for moving the data between the peripheral devices that it controls and its local buffer storage.
-- Typically, operating systems have a device driver for each device controller. This device driver understands the device controller and provides the rest of the operating system with a uniform interface to the device. 
-- The CPU and the device controllers can execute in parallel, competing for memory cycles. 
+- Typically, operating systems have a device driver for each device controller. 
+- This device driver understands the device controller and provides the rest of the operating system with a uniform interface to the device. 
+- The CPU and the device controllers can **execute in parallel, competing for memory cycles.**
 - To ensure orderly access to the shared memory, a memory controller synchronizes access to the memory.
 - In the following subsections, we describe some basics of how such a system operates, focusing on three key aspects of the system. 
 - We start with interrupts,
@@ -213,7 +214,7 @@ OS video:
 - 9. Protection and security
 
 ### 2.3 System calls
-- Systems calls provide an interface to the services made available by an operating system.
+- Systems calls **provide an interface** to the services made available by an operating system.
 - These calls are generally available as functions written in C and C++, although certain low-level tasks
 - (for example, tasks where hardware must be accessed directly)
 - may have to be written using assembly-language instructions.
@@ -272,9 +273,9 @@ OS video:
 - The API specifies a set of functions that are available to an application programmer,
 - including the parameters that are passed to each function and the return values the programmer can expect.
 - Three of the most common APIs available to application programmers are 
-- 1. the Windoes API for Windows systems, 
-- 2. the POSIX API for POSIX-based systems(which include virtually all versions of UNIX, LINUX,and macOS)
-- 3. JAVA API for programmers that run on the java virtual machine
+  - 1. the Windoes API for Windows systems, 
+  - 2. the POSIX API for POSIX-based systems(which include virtually all versions of UNIX, LINUX,and macOS)
+  - 3. JAVA API for programmers that run on the java virtual machine
 
 - A programmer accesses an API via library of code provided by the operating sysytem.
 - In the case of UNIX and Linux for programs written in the C language, the library is called libc.
@@ -319,7 +320,7 @@ OS video:
 - One of the most aspects of an OS is how it schedules threads onto available processing cores.
 - Several choices for designing CPU schedulers are available to programmers. 
 
-**Chapter 3 Processes
+## Chapter 3 Processes
 - A system consists of a collection of processes,
 - some executing user code, others executing opreating system code.
 - All these processed can execute concurrently, with the CPU multiplexed among them.
@@ -414,10 +415,11 @@ OS video:
 
 
 ## Cpapter 4 Threads & Concurrency
-- a process was an executing program with a single threas of control.
-- a process contain multiple threads of control
+- process:
+  - a process was an executing program with a single threas of control.
+  - a process contain multiple threads of control
 - Identifying opportunities for parallelism through the use of threads
-- is becoming increasingly important for modern multicore systems that provide multiple CPUs.
+- is important for **multicore systems that provide multiple CPUs.**
 - In this chapter, we introduce many concepts associated with multithreaded computer systems,
 - including APIs for the Pthreads, Windows, and Java thread libries.
 - And features that abstract the concept of creating threads,
