@@ -246,8 +246,7 @@ OS video:
   - Each of these operations requires another system call.
   - Possible error conditions for each system call must be handled.
     - For example, when the program tries to open the input file, it may find that there is no file of that name or that the file is protected against access.
-    - In these case, the program should output an error message 
-    - (another sequence of system calls)
+    - In these case, the program should output an error message (another sequence of system calls)
     - and then terminate abnormally(another system call).
     - If the input file exists, then we must create a new output file.
     - We may find that there is already an output file with the same name,
@@ -262,8 +261,8 @@ OS video:
     - On input, the program may find that the end of the file has been reached or that there was a hardware failure in the read(such as a parity error).
     - The write operation may encounter various errors, depending on the output device (for example, no more available disk space).
     - Finally, after the entire file is copied, the program may close both files(2 system calls),
-    - write a message to the console or window(more system calls),
-    - and finally terminate normally(the final system call).
+      - write a message to the console or window(more system calls),
+      - and finally terminate normally(the final system call).
 
 ### 2.3.2 API (Application programming interface)
 - As you can see, even simple programs may make heavy use of the operating system.
@@ -419,11 +418,10 @@ OS video:
   - a process was an executing program with a single threas of control.
   - a process contain multiple threads of control
 - Identifying opportunities for parallelism through the use of threads
-- is important for **multicore systems that provide multiple CPUs.**
+  - is important for **multicore systems that provide multiple CPUs.**
 - In this chapter, we introduce many concepts associated with multithreaded computer systems,
-- including APIs for the Pthreads, Windows, and Java thread libries.
-- And features that abstract the concept of creating threads,
-- allowing developers to focus on identifying opportunities for paralleslism
+  - including APIs for the Pthreads, Windows, and Java thread libries.
+- And features that abstract the concept of creating threads, allowing developers to focus on identifying opportunities for paralleslism
 - and letting language features and API frameworks manage the details of thread creation and management.
 
 ### 4.1 Overview
