@@ -345,7 +345,7 @@ OS video:
 
 - the sizes of the text and data sections are fixed, as their sizes do not change during program run time.
 - However, the stack and heap sections can shrink and grow dynamically during program exection.
-**** activation record: containg function parameter, local variables, return address is pushed onto the stack. ****
+### activation record: containg function parameter, local variables, return address is pushed onto the stack. 
 - Each time a function is called, and activation record containing function paremeters, local variables, and the return address is pushed onto the stack;
 - when control is returned from the function, the activation record is popped from the stack.
 
@@ -353,7 +353,7 @@ OS video:
 - and will shrink when memory is returned to the system.
 - Although the stack and heap sections grow toward one another, 
 - the **OS must ensure they do not overlap one another. **
-**** program itself is not a process(program -> passive entity; program with a program counter  -> active entity) ****
+### program itself is not a process(program -> passive entity; program with a program counter  -> active entity)
 - Program by itself is not a process
 - A program is a passive entity, such ad a file containing a list of instructions stored on disk (often called an executabl fill).
 - In contrast, a process is an active entity, with a program counter specifying the next instruction to execute and a set of associated resources.
@@ -362,7 +362,7 @@ OS video:
 - and entering the name of the executable file on the command line(as in prog.exe or a.out). 
 
 
-### 2 processes be associated with the same program, they are considered 2 seperate execution sequences.###
+### 2 processes be associated with the same program, they are considered 2 seperate execution sequences.
 - For instance, several users may be running different copies of the mail program,
 - or the same user may invokes many copies of the web browser program.
 - Each of these is a sperate process; 
