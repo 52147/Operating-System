@@ -460,12 +460,12 @@ OS video:
 3. bounded waiting:
    - There exists a bound, or limit, on the number of times that other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.
 
-'''
+```
 while(true){
 entry section
    critical section
 exit section
    remainder section
 }
-'''
+```
 - general structure of a typical process
