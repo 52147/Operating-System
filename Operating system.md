@@ -425,7 +425,47 @@ OS video:
 - and letting language features and API frameworks manage the details of thread creation and management.
 
 ### 4.1 Overview
-- A thread is a basic unit of CPU utilzation; it comprises a thread ID, a program conter(PC), a re
+- A thread is a basic unit of CPU utilzation; it comprises a thread ID, a program conter(PC), a re 
 
 
 
+## chapter 6 Synchronizatoion tools
+
+- cooperating process:
+  - is one that can affect or be affected by other processes ececuting in the system.
+  - Cooperating processes can either directly share a logical address space(both code and data) or be allowed to share data only through shared memory or message passing.
+  - Concurrent access to shared data may result in data inconsistency. 
+- In this chapter, we discuss various mechanism to ensure the orderly execution of cooperating processes that share a logical address space, so that data consistency is maintained.
+
+
+
+### 6.2 critical-section problem
+- Consider a system consisting of n processes {P0, P1, ..., Pn-1}.
+- Each process has a segement of code, called a critical section, in which the process may be accessing -- and updating -- data that is shared with at least one other process.
+- when one process is ececuting in its critical section, no other process is allowed to ececute in its critical section.
+- no two process are ececuting is allowed to execute in its critical section at the same time.
+
+- The critical section problem is to design a protocol that the processes can use to synchronize therir activity so as to cooperatively share data.
+- Each process must request permission to enter its critical section.
+- The critical section may be followed by an exit section.
+- The remaining code is the remainder section.
+
+#### a solution to the critical section problem :
+1. mutual exclusion:
+   - If process Pi is executing in its critical section, then no other processes can be executing in their critical sections.
+2. progress:
+   - If no process is ececutin in its critical section and some processes wish to enter their critical sections,
+   - then only those processes that are not executing in their remainder sections can participate in deciding which will enter its critical section next,
+   - and this selection cannot be postponed indefinitely.
+3. bounded waiting:
+   - There exists a bound, or limit, on the number of times that other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.
+
+'''
+while(true){
+entry section
+   critical section
+exit section
+   remainder section
+}
+'''
+- general structure of a typical process
