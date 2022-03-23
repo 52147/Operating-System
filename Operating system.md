@@ -469,3 +469,29 @@ exit section
 }
 ```
 - general structure of a typical process
+
+
+## Chapter 8 Deadlocks
+- deadlocks:
+  - In a multiprogramming environment, several threads may compete for a finite number of resources.
+  - A thread requests resources; if the resources are not available at that time, the thread enters a waiting state.
+  - Sometimes, a waiting thread can never again change state, because the resources it has requested are held by other waiting threads.
+  - The situation is called a deadlock.
+  - We difined deadlock as a situation in which every process in a set of processes is waiting for an event that can be caused only by another process in the set.
+
+
+- In this chapter, we describe method that application developers as well as OS programmers can use to prevent or deal with dead locks.
+- Although some applications can identify programs that may deadlock,
+- os typically do not provide deadlock-prevention facilities,
+- and it remains the responsibility of programmers to ensure that they design deadlock-free programs.
+
+### 8.4 methods for handling deadlocks
+- we can deal with the deadlock problem in 3 ways:
+  - 1. We can ignore the problem altogether and pretend that deadlocks never occur in the system.
+  - 2. We can use a protocol to prevent or avoid deadlocks, ensuring that the system will never enter a deadlocked state.
+  - 3. We can allow the system to enter a deadlocked state, detect it, and recover.
+
+#### deack avoidence:
+- requires that the is be given additional information in advanve concerning which resources a thread will request and use during its lifetime.
+
+## 8.5 Deadlock prevention
